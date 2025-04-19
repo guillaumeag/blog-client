@@ -31,7 +31,7 @@ export default async function Home() {
         <h2 className="text-xl text-center font-bold p-4">Latest Posts</h2>
         <div id="posts">
           {posts.map((post: Post) => (
-            <article key={post.id} className="py-5 px-4 border-b-1 border-gray-200" id="post">
+            <article key={post.id} className="py-5 border-b-1 border-gray-200" id="post">
               <Link href={`/posts/${post.id}`}className="grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] items-center gap-2">
                 <span className="font-bold text-orange-600 text-sm">{new Date(post.date).toLocaleDateString()}</span>
                 <span className="flex-grow hover:underline">{post.title}</span>
