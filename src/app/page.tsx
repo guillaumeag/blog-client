@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Define the structure of a blog post object
 // in order to use it in the page
@@ -25,7 +26,13 @@ export default async function Home() {
         <h1 className="text-4xl font-bold">Next Blog</h1>
 
         <ul>
-          {posts.map((post: Post) => (<li key={post.id}>{post.title}</li>))}
+          {posts.map((post: Post) => (
+            <li key={post.id}>
+              <Link href={`/posts/${post.id}`}>
+                {post.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </main>
     </div>
