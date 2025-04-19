@@ -31,6 +31,7 @@ export default async function Home() {
               <Link href={`/posts/${post.id}`}>
                 <span className="font-bold text-orange-600 text-sm mr-2">{new Date(post.date).toLocaleDateString()}</span>
                 <span className="hover:underline">{post.title}</span>
+                <span className="ml-2 text-sm text-gray-500">{post.author}</span>
               </Link>
             </article>
           ))}
