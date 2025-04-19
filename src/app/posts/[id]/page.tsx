@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // Define the structure of a blog post object
 // in order to use it in the page
 type Post = {
@@ -31,6 +33,11 @@ export default async function Page({params}: {params: Promise<{ id: string }>}) 
           <section className="article-content mt-8">
             <p>{post.content}</p>
           </section>
+          <footer className="py-8 text-center">
+            <Link href="/" className="bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-full">
+              Back to the list
+            </Link>
+          </footer>
         </article>
       </div>
     </main>
