@@ -30,7 +30,7 @@ export default async function Home() {
             <article key={post.id} className="py-5 px-4 border-b-1 border-gray-200" id="post">
               <Link href={`/posts/${post.id}`}>
                 <span className="font-bold text-orange-600 text-sm mr-2">{new Date(post.date).toLocaleDateString()}</span>
-                <span>{post.title}</span>
+                <span className="hover:underline">{post.title}</span>
               </Link>
             </article>
           ))}
