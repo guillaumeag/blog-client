@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 // Define the structure of a blog post object
 // in order to use it in the page
@@ -31,6 +32,7 @@ export default async function Page({params}: {params: Promise<{ id: string }>}) 
             <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()} • {post.author}</p>
           </header>
           <section className="article-content mt-8">
+            <Image className="rounded-lg mb-8" src="/image-placeholder-1200x800.svg" alt={post.title} width={800} height={400} /> 
             <p>{post.content}</p>
           </section>
           <footer className="py-8 text-center">
