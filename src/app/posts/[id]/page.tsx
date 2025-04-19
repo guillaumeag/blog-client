@@ -20,14 +20,19 @@ export default async function Page({params}: {params: Promise<{ id: string }>}) 
   const post: Post = await post_data.json();
   
   return (
-    <main>
-      <article>
-        <h1>{post.title}</h1>
-        <p>{post.content}</p>
-        <p>Author: {post.author}</p>
-        <p>Date: {new Date(post.date).toLocaleDateString()}</p>
-        <p>Category: {post.category}</p>
-      </article>
+    <main className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 max-w-2xl mx-auto">
+        <article>
+          <header>
+            <p className="text-sm text-orange-600">{post.category}</p>
+            <h1 className="text-4xl font-black uppercase py-4">{post.title}</h1>
+            <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()} • {post.author}</p>
+          </header>
+          <section className="article-content mt-8">
+            <p>{post.content}</p>
+          </section>
+        </article>
+      </div>
     </main>
   );
 }
