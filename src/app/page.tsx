@@ -23,7 +23,10 @@ export default async function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 max-w-2xl mx-auto gap-4">
-        <h1 className="text-4xl font-bold text-center py-4">Next Blog</h1>
+        <div className="text-center">
+          <h1 className="text-6xl font-bold py-4">Next Blog</h1>
+          <p className="text-current/80">This is a Blog demo using Next.js</p>
+        </div>
 
         <div id="posts">
           {posts.map((post: Post) => (
