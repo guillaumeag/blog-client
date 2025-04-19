@@ -28,10 +28,10 @@ export default async function Home() {
         <div id="posts">
           {posts.map((post: Post) => (
             <article key={post.id} className="py-5 px-4 border-b-1 border-gray-200" id="post">
-              <Link href={`/posts/${post.id}`}>
-                <span className="font-bold text-orange-600 text-sm mr-2">{new Date(post.date).toLocaleDateString()}</span>
-                <span className="hover:underline">{post.title}</span>
-                <span className="ml-2 text-sm text-gray-500">{post.author}</span>
+              <Link href={`/posts/${post.id}`}className="grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] items-center gap-2">
+                <span className="font-bold text-orange-600 text-sm">{new Date(post.date).toLocaleDateString()}</span>
+                <span className="flex-grow hover:underline">{post.title}</span>
+                <span className="text-sm text-gray-500 sm:text-right">{post.author}</span>
               </Link>
             </article>
           ))}
