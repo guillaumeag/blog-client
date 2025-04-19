@@ -29,6 +29,7 @@ export default async function Home() {
           {posts.map((post: Post) => (
             <li key={post.id} className="py-5 px-4 border-b-1 border-gray-200">
               <Link href={`/posts/${post.id}`}>
+                <span className="font-bold text-orange-600 text-sm mr-2">{new Date(post.date).toLocaleDateString()}</span>
                 <span className="">{post.title}</span>
               </Link>
             </li>
