@@ -21,9 +21,9 @@ export default async function Home() {
   const posts: Post[] = await blog_data.json();
   
   return (
-    <div>
-      <main>
-        <h1 className="text-4xl font-bold">Next Blog</h1>
+    <main className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 max-w-lg mx-auto gap-4">
+        <h1 className="text-4xl font-bold text-center py-4">Next Blog</h1>
 
         <ul>
           {posts.map((post: Post) => (
@@ -34,7 +34,7 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
