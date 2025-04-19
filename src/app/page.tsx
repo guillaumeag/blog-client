@@ -35,7 +35,7 @@ export default async function Home() {
               <Link href={`/posts/${post.id}`}className="grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] items-center gap-2">
                 <span className="font-bold text-orange-600 text-sm">{new Date(post.date).toLocaleDateString()}</span>
                 <span className="flex-grow hover:underline">{post.title}</span>
-                <span className="text-sm text-gray-500 sm:text-right">{post.author}</span>
+                <span className="text-xs text-gray-500 sm:text-right">{post.category}</span>
               </Link>
             </article>
           ))}
