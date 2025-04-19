@@ -22,14 +22,14 @@ export default async function Home() {
   
   return (
     <main className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 max-w-lg mx-auto gap-4">
+      <div className="grid grid-cols-1 max-w-2xl mx-auto gap-4">
         <h1 className="text-4xl font-bold text-center py-4">Next Blog</h1>
 
         <ul>
           {posts.map((post: Post) => (
-            <li key={post.id}>
+            <li key={post.id} className="py-5 px-4 border-b-1 border-gray-200">
               <Link href={`/posts/${post.id}`}>
-                {post.title}
+                <span className="">{post.title}</span>
               </Link>
             </li>
           ))}
