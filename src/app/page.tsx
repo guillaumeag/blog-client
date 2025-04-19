@@ -25,16 +25,16 @@ export default async function Home() {
       <div className="grid grid-cols-1 max-w-2xl mx-auto gap-4">
         <h1 className="text-4xl font-bold text-center py-4">Next Blog</h1>
 
-        <ul>
+        <div id="posts">
           {posts.map((post: Post) => (
-            <li key={post.id} className="py-5 px-4 border-b-1 border-gray-200">
+            <article key={post.id} className="py-5 px-4 border-b-1 border-gray-200" id="post">
               <Link href={`/posts/${post.id}`}>
                 <span className="font-bold text-orange-600 text-sm mr-2">{new Date(post.date).toLocaleDateString()}</span>
-                <span className="">{post.title}</span>
+                <span>{post.title}</span>
               </Link>
-            </li>
+            </article>
           ))}
-        </ul>
+        </div>
       </div>
     </main>
   );
