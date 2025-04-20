@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 // Define the structure of a blog post object
